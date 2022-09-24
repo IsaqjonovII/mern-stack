@@ -1,0 +1,30 @@
+:root {
+  --main-font-color-white: #f7f7f7;
+  --main--blur-bg-color: radial-gradient(
+      at 20% 15%,
+      hsl(162.11, 80%, 40%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 90% 85%, hsl(218.39, 95%, 40%) 0, transparent 55%);
+  --main-bg-color: #11171e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+  background-image: var(--main--blur-bg-color);
+}
+
+h1, h3 {
+  color: var(--main-font-color-white);
+}

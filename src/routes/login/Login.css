@@ -1,0 +1,35 @@
+.register {
+  width: 30vw;
+  height: 70vh;
+  backdrop-filter: blur(17px) saturate(180%);
+  -webkit-backdrop-filter: blur(17px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.624);
+  border-radius: 0.5rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.125);
+  padding: 1.25rem;
+}
+
+.register label {
+    padding: 40px;
+}
+
+.register p {
+    margin: .8rem 0 0 0;
+    color: var(--main-font-color-white);
+}
+
+form input {
+  width: 100%;
+  padding: 0.625rem;
+  font-size: 1rem;
+  margin: 0.625rem 0;
+  border: none;
+  outline: none;
+  color: var(--main-font-color-white);
+  border-radius: .2rem;
+  background-color: var(--main-bg-color);
+}
+
+form input:focus {
+    outline: .06rem solid hsl(162.11, 80%, 40%) ;
+}
