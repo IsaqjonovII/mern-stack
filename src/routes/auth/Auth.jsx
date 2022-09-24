@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../login/Login.css"
 
 const Auth = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
 
     const handleForm = async (e) => {
@@ -23,6 +25,9 @@ const Auth = () => {
 
         const data = await repsonse.json()
         console.log(data);
+        if(data.status === 'ok') {
+            navigate('/login')
+        }
     }
     return (
         <div className='register'>

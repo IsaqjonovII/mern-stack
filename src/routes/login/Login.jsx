@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import "./Login.css"
+import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
-
-
+    const navigate = useNavigate();
     const handleForm = async (e) => {
         e.preventDefault();
         const repsonse = await fetch("http://localhost:5000/api/login", {
@@ -19,7 +19,14 @@ const Login = () => {
             }),
         });
 
-        const data = await repsonse.json()
+        const data = await repsonse.json();
+        if(data.user) {
+            localStorage.setItem('token', data.user)
+            alert("Successfully logged in");
+            navigate("/dashboard")
+        } else {
+            alert("Your name or password is wrong")
+        }
         console.log(data);
     }
     return (

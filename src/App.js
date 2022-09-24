@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Auth from "./routes/auth/Auth";
+import Dashboard from "./routes/Dashboard";
 import Login from "./routes/login/Login";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/register" element={<Auth />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </div>
   );
